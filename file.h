@@ -1,3 +1,7 @@
+/*Author : 	fname = Julien
+			lname = Leclercq
+			id[ULB] = 000479336
+  Date : 	06/12/20 */
 #ifndef _FILE_H
 #define _FILE_H
 
@@ -11,9 +15,9 @@
 
 FILE* create_log_file(char* query);
 
-void title_for_file(char* buffer, char* query, char* field, char* value, 
+void title_for_file(FILE* f, char* query, char* field, char* value,
 	double time, int nbre_result);
 
-void write_on_file(FILE* f, student_t *match_list);
+void write_on_file(FILE* f, student_t **match_list, int match_size);
 
 #endif

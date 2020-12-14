@@ -1,3 +1,7 @@
+/*Author : 	fname = Julien
+			lname = Leclercq
+			id[ULB] = 000479336
+  Date : 	06/12/20 */
 #ifndef _DB_H
 #define _DB_H
 
@@ -22,9 +26,9 @@ typedef struct {
 
 bool cmp_value_and_db_arg(int field, student_t people, char* value);
 
-student_t* db_search(database_t *db, char* filter, char* value);
+student_t** db_search(int *match_size, database_t *db, char* filter, char* value);
 
-/** 
+/**
  *  Add a student to the database.
  * TODO: implement this function.
  **/
@@ -34,7 +38,7 @@ void db_add(database_t *db, student_t s);
  * Delete a student from the database.
  * TODO: implement this function.
  **/
-void db_delete(database_t *db, student_t *s);
+void db_delete(database_t *db, student_t **match_list, int match_size);
 
 /**
  * Save the content of a database_t to the specified file.

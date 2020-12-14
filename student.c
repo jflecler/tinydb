@@ -1,3 +1,7 @@
+/*Author : 	fname = Julien
+			lname = Leclercq
+			id[ULB] = 000479336
+  Date : 	06/12/20 */
 #include "student.h"
 
 void update_student(student_t *s, char* field, char* value) {

@@ -1,3 +1,7 @@
+/*Author : 	fname = Julien
+			lname = Leclercq
+			id[ULB] = 000479336
+  Date : 	06/12/20 */
 #ifndef _STUDENT_H
 #define _STUDENT_H
 

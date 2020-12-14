@@ -1,9 +1,9 @@
-FLAGS=-pthread -std=c11 -Wall -Wpedantic #-Werror
+FLAGS=-pthread -std=c11 -Wall -Wpedantic
 
 run:
 	make main && ./tinydb tests/data/test_db.bin
 
-main: main.c parsing student db file get_time clean
+main: main.c parsing student db file get_time clean tests
 	gcc -o tinydb main.c parsing.o student.o db.o get_time.o file.o ${FLAGS}
 
 parsing: parsing.c parsing.h
@@ -25,5 +25,4 @@ tests: tests/run_tests.py
 	./tests/run_tests.py
 
 clean:
-	touch logs/tmp
 	rm logs/*

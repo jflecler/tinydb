@@ -1,3 +1,7 @@
+/*Author : 	fname = Julien
+			lname = Leclercq
+			id[ULB] = 000479336
+  Date : 	06/12/20 */
 #ifndef _PARSING_H
 #define _PARSING_H
 
@@ -13,7 +17,7 @@ int parse_command(char* command);
 
 int parse_field(char* field);
 
-/** 
+/**
  * Parse the arguments of an update query.
  * Example:
  * ```
@@ -37,7 +41,7 @@ bool parse_update(char* query_arguments, char* field_filter, char* value_filter,
  **/
 bool parse_insert(char* query_arguments, char* fname, char* lname, unsigned* id, char* section, struct tm* birthdate);
 
-/** 
+/**
  * Parse field=value selectors.
  **/
 bool parse_selectors(char* query, char* field, char* value);
